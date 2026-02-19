@@ -12,7 +12,7 @@ import (
 
 // ExtensionIndex represents the Zed extensions/index.json structure.
 type ExtensionIndex struct {
-	Extensions map[string]ExtensionIndexEntry     `json:"extensions"`
+	Extensions map[string]ExtensionIndexEntry      `json:"extensions"`
 	Themes     map[string]ExtensionIndexThemeEntry `json:"themes"`
 	IconThemes map[string]interface{}              `json:"icon_themes"`
 	Languages  map[string]ExtensionIndexLangEntry  `json:"languages"`
@@ -24,16 +24,16 @@ type ExtensionIndexEntry struct {
 }
 
 type ExtensionManifest struct {
-	ID          string            `json:"id" toml:"id"`
-	Name        string            `json:"name" toml:"name"`
-	Version     string            `json:"version" toml:"version"`
-	Description string            `json:"description" toml:"description"`
-	Authors     []string          `json:"authors" toml:"authors"`
-	Repository  string            `json:"repository" toml:"repository"`
-	Lib         *ManifestLib      `json:"lib" toml:"lib"`
-	Themes      []string          `json:"themes" toml:"themes"`
-	IconThemes  []string          `json:"icon_themes" toml:"icon_themes"`
-	Languages   []string          `json:"languages" toml:"languages"`
+	ID          string                 `json:"id" toml:"id"`
+	Name        string                 `json:"name" toml:"name"`
+	Version     string                 `json:"version" toml:"version"`
+	Description string                 `json:"description" toml:"description"`
+	Authors     []string               `json:"authors" toml:"authors"`
+	Repository  string                 `json:"repository" toml:"repository"`
+	Lib         *ManifestLib           `json:"lib" toml:"lib"`
+	Themes      []string               `json:"themes" toml:"themes"`
+	IconThemes  []string               `json:"icon_themes" toml:"icon_themes"`
+	Languages   []string               `json:"languages" toml:"languages"`
 	Grammars    map[string]interface{} `json:"grammars" toml:"grammars"`
 }
 
