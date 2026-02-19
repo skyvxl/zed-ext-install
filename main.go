@@ -12,9 +12,10 @@ var version = "0.1.0"
 
 func main() {
 	rootCmd := &cobra.Command{
-		Use:     "zed-ext-install",
-		Short:   "CLI tool for installing Zed editor extensions",
-		Version: version,
+		Use:               "zed-ext-install",
+		Short:             "CLI tool for installing Zed editor extensions",
+		Version:           version,
+		CompletionOptions: cobra.CompletionOptions{DisableDefaultCmd: true},
 	}
 
 	rootCmd.AddCommand(installCmd())
